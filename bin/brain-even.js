@@ -25,7 +25,7 @@ for (let i = 1; i <= 3; i += 1) {
     process.exit(0);
   }
   if (answer === 'no' && isOdd) console.log('Correct!');
-  if (answer !== 'yes' || answer !== 'no') {
+  if (answer !== 'yes' && answer !== 'no') {
     console.log('Incorrect answer!');
     process.exit(0);
   }
