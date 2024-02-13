@@ -17,17 +17,17 @@ for (let i = 1; i <= 3; i += 1) {
 
   if (answer === 'yes' && isOdd) {
     console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${username}!`);
-    process.exit(-1);
+    process.exit(0);
   }
   if (answer === 'yes' && !isOdd) console.log('Correct!');
   if (answer === 'no' && !isOdd) {
     console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${username}!`);
-    process.exit(-1);
+    process.exit(0);
   }
   if (answer === 'no' && isOdd) console.log('Correct!');
   if (answer !== 'yes' || answer !== 'no') {
     console.log('Incorrect answer!');
-    process.exit(-1);
+    process.exit(0);
   }
 }
 
