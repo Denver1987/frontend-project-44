@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import runEven from '../src/games/even.js';
+import runCalc from '../src/games/calc.js';
 import { MAX_ROUNDS } from '../src/settings.js';
 
-runEven(MAX_ROUNDS);
+runCalc(MAX_ROUNDS);
