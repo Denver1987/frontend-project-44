@@ -4,3 +4,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ccdf25e5642cf6fe3695/maintainability)](https://codeclimate.com/github/Denver1987/frontend-project-44/maintainability)
 
 https://asciinema.org/a/t7eYDuhhpAcL0lfdbrQfAhann
+https://asciinema.org/a/ov6KS4RdAvg50Hkxd2szRq5uj
