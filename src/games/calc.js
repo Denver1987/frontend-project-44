@@ -4,9 +4,10 @@ import playGame from './game-common.js';
 const game = {
   task: 'What is the result of the expression?',
   setParams: () => {
-    const operation = generateFromRange(3, 0);
-    const number1 = generateFromRange(100, 1);
-    const number2 = generateFromRange(100, 1);
+    const operation = generateFromRange(2);
+    const number1 = generateFromRange(99, 1);
+    const number2 = generateFromRange(99, 1);
+    console.log(operation);
     switch (operation) {
       case 0: return [`${number1} + ${number2}`, String(number1 + number2)];
 

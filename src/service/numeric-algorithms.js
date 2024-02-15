@@ -1,9 +1,15 @@
 export function gcdEuclid(number1, number2) {
+  let a = number1;
+  let b = number2;
   let remainder;
-  while (number2 !== 0) {
-    remainder = number1 % number2;
-    number1 = number2;
-    number2 = remainder;
+  while (b !== 0) {
+    remainder = a % b;
+    a = b;
+    b = remainder;
   }
-  return number1;
+  return a;
+}
+
+export function isPrime(number) {
+  console.log(number);
 }
