@@ -1,3 +1,9 @@
+/**
+ * Определяет наибольший общий делитель по алгоритму Евклида
+ * @param {number} number1
+ * @param {number} number2
+ * @returns {number}
+ */
 export function gcdEuclid(number1, number2) {
   let a = number1;
   let b = number2;
@@ -10,6 +16,11 @@ export function gcdEuclid(number1, number2) {
   return a;
 }
 
+/**
+ * Выполняет разложение числа на простые множители, возвращает массив с множителями.
+ * @param {number} number
+ * @returns {number[]}
+ */
 export function findFactors(number) {
   const factors = [];
   let num = number;
@@ -33,6 +44,11 @@ export function findFactors(number) {
   return factors;
 }
 
+/**
+ * Определяет, является ли число number простым
+ * @param {number} number
+ * @returns {boolean}
+ */
 export function isPrime(number) {
   if (number === 1) return true;
   if (findFactors(number).length === 1) return true;
