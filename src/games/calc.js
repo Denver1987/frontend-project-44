@@ -2,15 +2,13 @@ import { generateFromRange } from '../service/numberGeneration.js';
 import playGame from './game-common.js';
 
 const game = {
-  settings: {
-    MIN_NUMBER_RANGE: 1,
-    MAX_NUMBER_RANGE: 100,
-  },
+  MIN_NUMBER_RANGE: 1,
+  MAX_NUMBER_RANGE: 100,
   task: 'What is the result of the expression?',
-  setParams: () => {
+  setParams() {
     const operation = generateFromRange(0, 2);
-    const number1 = generateFromRange(1, 100);
-    const number2 = generateFromRange(1, 100);
+    const number1 = generateFromRange(this.MIN_NUMBER_RANGE, this.MAX_NUMBER_RANGE);
+    const number2 = generateFromRange(this.MIN_NUMBER_RANGE, this.MAX_NUMBER_RANGE);
     switch (operation) {
       case 0: return [`${number1} + ${number2}`, String(number1 + number2)];
 
