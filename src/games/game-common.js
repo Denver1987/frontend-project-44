@@ -7,6 +7,9 @@ import {
   printTask,
 } from '../cli.js';
 
+/**
+ * Максимальное количество раундов
+ */
 const MAX_ROUNDS = 3;
 
 export default function playGame(game) {
