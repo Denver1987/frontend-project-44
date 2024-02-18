@@ -49,5 +49,5 @@ export function printCorrect() {
  * @param {*} username - имя пользователя
  */
 export function printCongratulations(username) {
-  console.log(`Congratulations ${username}!!!`);
+  console.log(`Congratulations, ${username}!!!`);
 }
