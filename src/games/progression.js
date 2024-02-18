@@ -10,9 +10,9 @@ const game = {
   MIN_STEP: 1,
   MAX_STEP: 5,
   setParams() {
-    const progression = [generateFromRange(this.MIN_NUMBER_RANGE, this.MAX_NUMBER_RANGE)];
-    const progressionLength = generateFromRange(this.MIN_NUMBERS_COUNT, this.MAX_NUMBERS_COUNT);
-    const progressionStep = generateFromRange(this.MIN_STEP, this.MAX_STEP);
+    const progression = [generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE)];
+    const progressionLength = generateFromRange(game.MIN_NUMBERS_COUNT, game.MAX_NUMBERS_COUNT);
+    const progressionStep = generateFromRange(game.MIN_STEP, game.MAX_STEP);
     for (let i = 1; i < progressionLength; i += 1) {
       progression.push(progression[i - 1] + progressionStep);
     }

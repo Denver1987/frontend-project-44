@@ -6,7 +6,7 @@ const game = {
   MAX_NUMBER_RANGE: 100,
   task: 'Answer "yes" if the number is even, otherwise answer "no".',
   setParams() {
-    const number = generateFromRange(this.MIN_NUMBER_RANGE, this.MAX_NUMBER_RANGE);
+    const number = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
     const correctAnswer = number % 2 ? 'no' : 'yes';
     return [number, correctAnswer];
   },
