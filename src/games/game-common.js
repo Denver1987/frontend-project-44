@@ -14,7 +14,7 @@ const MAX_ROUNDS = 3;
 
 /**
  * Реализует общюю логику игр
- * @param {object} game - объект с параметрами игры
+ * @param {Object} game - объект с параметрами игры
  */
 export default function playGame(game) {
   const username = greetUser();

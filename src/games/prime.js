@@ -13,6 +13,9 @@ const game = {
   },
 };
 
+/**
+ * Запускает игру Простое ли число
+ */
 export default function isPrimeGame() {
   playGame(game);
 }

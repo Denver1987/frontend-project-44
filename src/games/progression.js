@@ -26,6 +26,9 @@ const game = {
   },
 };
 
+/**
+ * Запускает игру Прогрессия
+ */
 export default function progressionGame() {
   playGame(game);
 }

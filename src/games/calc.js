@@ -4,9 +4,10 @@ import playGame from './game-common.js';
 const game = {
   MIN_NUMBER_RANGE: 1,
   MAX_NUMBER_RANGE: 100,
+  OPERATION_COUNT: 3,
   task: 'What is the result of the expression?',
   setParams() {
-    const operation = generateFromRange(0, 2);
+    const operation = generateFromRange(0, game.OPERATION_COUNT - 1);
     const number1 = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
     const number2 = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
     switch (operation) {
@@ -21,6 +22,9 @@ const game = {
   },
 };
 
+/**
+ * Запускает игру Калькулятор
+ */
 export default function calculator() {
   playGame(game);
 }

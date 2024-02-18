@@ -12,6 +12,9 @@ const game = {
   },
 };
 
+/**
+ * Запускает игру Проверка на чётность
+ */
 export default function evenOrNot() {
   playGame(game);
 }

@@ -14,6 +14,9 @@ const game = {
   },
 };
 
+/**
+ * Запускает игру НОД
+ */
 export default function findGcd() {
   playGame(game);
 }
