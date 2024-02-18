@@ -22,7 +22,7 @@ const game = {
       if (i === desiredItem) taskQuestion += ' ..';
       else taskQuestion = `${taskQuestion} ${progression[i]}`;
     }
-    return [taskQuestion, String(progression[desiredItem])];
+    return [taskQuestion.trim(), String(progression[desiredItem])];
   },
 };
 
