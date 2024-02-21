@@ -20,12 +20,12 @@ export function getGCD(number1, number2) {
 }
 
 const game = {
-  MIN_NUMBER_RANGE: 1,
-  MAX_NUMBER_RANGE: 100,
+  minNumberRange: 1,
+  maxNumberRange: 100,
   task: 'Find the greatest common divisor of given numbers.',
   setParams() {
-    const number1 = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
-    const number2 = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
+    const number1 = generateFromRange(game.minNumberRange, game.maxNumberRange);
+    const number2 = generateFromRange(game.minNumberRange, game.maxNumberRange);
     const gcd = getGCD(number1, number2);
     return [`${number1} ${number2}`, String(gcd)];
   },

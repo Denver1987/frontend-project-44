@@ -41,11 +41,11 @@ export function isPrime(number) {
 }
 
 const game = {
-  MIN_NUMBER_RANGE: 1,
-  MAX_NUMBER_RANGE: 100,
+  minNumberRange: 1,
+  maxNumberRange: 100,
   task: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   setParams() {
-    const number = generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE);
+    const number = generateFromRange(game.minNumberRange, game.maxNumberRange);
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
     return [String(number), correctAnswer];
   },

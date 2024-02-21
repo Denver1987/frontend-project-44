@@ -3,16 +3,16 @@ import playGame from './game-common.js';
 
 const game = {
   task: 'What number is missing in the progression?',
-  MIN_NUMBER_RANGE: 1,
-  MAX_NUMBER_RANGE: 100,
-  MIN_NUMBERS_COUNT: 5,
-  MAX_NUMBERS_COUNT: 15,
-  MIN_STEP: 1,
-  MAX_STEP: 5,
+  minNumberRange: 1,
+  maxNumberRange: 100,
+  minNumbersCount: 5,
+  maxNumbersCount: 15,
+  minStep: 1,
+  maxStep: 5,
   setParams() {
-    const progression = [generateFromRange(game.MIN_NUMBER_RANGE, game.MAX_NUMBER_RANGE)];
-    const progressionLength = generateFromRange(game.MIN_NUMBERS_COUNT, game.MAX_NUMBERS_COUNT);
-    const progressionStep = generateFromRange(game.MIN_STEP, game.MAX_STEP);
+    const progression = [generateFromRange(game.minNumberRange, game.maxNumberRange)];
+    const progressionLength = generateFromRange(game.minNumbersCount, game.maxNumbersCount);
+    const progressionStep = generateFromRange(game.minStep, game.maxStep);
     for (let i = 1; i < progressionLength; i += 1) {
       progression.push(progression[i - 1] + progressionStep);
     }
