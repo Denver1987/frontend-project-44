@@ -1,11 +1,4 @@
-import {
-  greetUser,
-  askUser,
-  printWrongAnswer,
-  printCorrect,
-  printCongratulations,
-  printTask,
-} from '../cli.js';
+import readlineSync from 'readline-sync';
 
 /**
  * Максимальное количество раундов
@@ -17,20 +10,22 @@ const MAX_ROUNDS = 3;
  * @param {Object} game - объект с параметрами игры
  */
 export default function playGame(game) {
-  const username = greetUser();
+  console.log('Welcome to the Brain Games!');
+  const username = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${username}!`);
 
-  printTask(game.task);
+  console.log(game.task);
 
   for (let i = 1; i <= MAX_ROUNDS; i += 1) {
     const [taskQuestion, correctAnswer] = game.setParams();
 
-    const answer = askUser(taskQuestion);
+    const answer = readlineSync.question(`Question: ${taskQuestion}\nYou answer: `);
 
-    if (answer === correctAnswer) printCorrect();
+    if (answer === correctAnswer) console.log('Correct!');
     else {
-      printWrongAnswer(answer, correctAnswer, username);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${username}!`);
       process.exit(0);
     }
   }
-  printCongratulations(username);
+  console.log(`Congratulations, ${username}!!!`);
 }
