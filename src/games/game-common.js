@@ -3,21 +3,21 @@ import readlineSync from 'readline-sync';
 /**
  * Максимальное количество раундов
  */
-const MAX_ROUNDS = 3;
+const maxRounds = 3;
 
 /**
  * Реализует общюю логику игр
  * @param {Object} game - объект с параметрами игры
  */
-export default function playGame(game) {
+export default function playGame(task, setParams) {
   console.log('Welcome to the Brain Games!');
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!`);
 
-  console.log(game.task);
+  console.log(task);
 
-  for (let i = 1; i <= MAX_ROUNDS; i += 1) {
-    const [taskQuestion, correctAnswer] = game.setParams();
+  for (let i = 1; i <= maxRounds; i += 1) {
+    const [taskQuestion, correctAnswer] = setParams();
 
     const answer = readlineSync.question(`Question: ${taskQuestion}\nYou answer: `);
 

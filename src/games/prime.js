@@ -40,20 +40,20 @@ export function isPrime(number) {
   return false;
 }
 
-const game = {
-  minNumberRange: 1,
-  maxNumberRange: 100,
-  task: 'Answer "yes" if given number is prime. Otherwise answer "no".',
-  setParams() {
-    const number = generateFromRange(game.minNumberRange, game.maxNumberRange);
-    const correctAnswer = isPrime(number) ? 'yes' : 'no';
-    return [String(number), correctAnswer];
-  },
-};
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const minNumberRange = 1;
+const maxNumberRange = 100;
+
+function setParams() {
+  const number = generateFromRange(minNumberRange, maxNumberRange);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  return [String(number), correctAnswer];
+}
 
 /**
  * Запускает игру Простое ли число
  */
 export default function isPrimeGame() {
-  playGame(game);
+  playGame(task, setParams);
 }
