@@ -1,5 +1,5 @@
 import { generateFromRange } from '../service/numberGeneration.js';
-import playGame from './game-common.js';
+import playGame from '../game-common.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 

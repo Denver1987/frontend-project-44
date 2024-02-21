@@ -1,5 +1,5 @@
 import { generateFromRange } from '../service/numberGeneration.js';
-import playGame from './game-common.js';
+import playGame from '../game-common.js';
 
 /**
  * Выполняет разложение числа на простые множители, возвращает массив с множителями.

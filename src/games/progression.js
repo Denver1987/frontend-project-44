@@ -1,5 +1,5 @@
 import { generateFromRange } from '../service/numberGeneration.js';
-import playGame from './game-common.js';
+import playGame from '../game-common.js';
 
 const task = 'What number is missing in the progression?';
 
